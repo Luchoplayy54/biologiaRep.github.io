@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Colegio República de Colombia - ADN</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .comments {
+            margin-top: 30px;
+        }
+
+        .comment {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .comment strong {
+            color: #3498db;
+        }
+
+        input[type="text"],
+        textarea,
+        button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Estilos adicionales */
+        .animated-button {
+            background: #3498db;
+            color: #fff;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 40px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .animated-button:hover {
+            background: #297db6;
+        }
+
+        .quiz-container {
+            display: none;
+            margin-top: 40px;
+        }
+
+        .quiz-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .quiz-form p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="oip.png" alt="Logo del colegio" class="logo" width="120" height="120">
+        <h1>Colegio República de Colombia</h1>
+        <p>Explorando el ADN</p>
+        <a href="pagina_colegio.html" class="button">Colegio República de Colombia</a>
+        <a href="informacion_biologia.html" class="button">Información Biología</a>
+        <a href="directivos_proyecto.html" class="button">Directivos Proyecto</a>
+    </header>
+
+    <div class="container">
+        <h2>¿Qué es el ADN?</h2>
+        <p>El ácido desoxirribonucleico, conocido como ADN, es una molécula esencial que almacena la información genética en los seres vivos. Esta información determina las características hereditarias de los organismos y juega un papel crucial en la herencia genética.</p>
+
+        <h2>Descubrimiento del ADN</h2>
+        <p>En 1953, los científicos James Watson y Francis Crick descubrieron la estructura del ADN. Su famoso modelo de doble hélice ayudó a comprender la configuración y revolucionó la biología molecular.</p>
+
+        <h2>Función del ADN</h2>
+        <p>El ADN contiene instrucciones para la síntesis de proteínas, fundamentales para el funcionamiento de las células, y es crucial para la transmisión de la información genética de una generación a la siguiente.</p>
+    </div>
+
+    <div class="container comments">
+        <h2>Comentarios:</h2>
+        <input type="text" id="name" placeholder="Tu nombre">
+        <textarea id="comment" placeholder="Escribe tu comentario"></textarea>
+        <button onclick="addComment()">Enviar comentario</button>
+        <div id="commentList"></div>
+    </div>
+
+    <a href="#" onclick="showQuiz(event)" class="animated-button">APROBAR</a>
+    <div class="quiz-container">
+        <h2>Cuestionario sobre el ADN</h2>
+        <form id="quizForm" class="quiz-form">
+            <p><strong>1. ¿Qué significa la sigla ADN?</strong></p>
+            <input type="radio" name="q1" value="a"> Ácido Desoxirribonucleico<br>
+            <input type="radio" name="q1" value="b"> Ácido Ribonucleico<br>
+            <input type="radio" name="q1" value="c"> Ácido Nucleico<br>
+            <!-- ... (resto de las preguntas) ... -->
+        </form>
+        <button onclick="submitQuiz()" class="button">Enviar respuestas</button>
+        <div id="quizResults"></div>
+    </div>
+
+    <script>
+        // Código JavaScript sigue siendo el mismo
+        // ...
+    </script>
+</body>
+</html>
